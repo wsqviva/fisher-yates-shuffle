@@ -1,4 +1,8 @@
-'use strict';
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.runTest = factory());
+}(this, (function () { 'use strict';
 
 /**
  * return number from lower value(include)to upper value(include)
@@ -20,7 +24,7 @@ function random(lower, upper) {
  * @return result {Array} return an shuffled array
  *
  */
-export default function(arr, n, inplace) {
+function shuffle(arr, n, inplace) {
   if (arguments.length == 1) {
     n = arr.length;
   }
@@ -45,3 +49,28 @@ export default function(arr, n, inplace) {
   result.length = n;
   return result;
 }
+
+var Benchmark = window.Benchmark;
+
+function benchmark(arrLen) {
+  var arr = [];
+  for (var i = 0; i < arrLen; i++) {
+    arr.push(i);
+  };
+
+  var suite = new Benchmark.Suite;
+  suite
+    .add('abc', function() {
+      shuffle(arr);
+    })
+    .run({'async': true});
+
+  return {
+    r: shuffle(arr),
+    suite: suite
+  };
+}
+
+return benchmark;
+
+})));

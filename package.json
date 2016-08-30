@@ -1,0 +1,32 @@
+{
+  "name": "fisher-yates-jsshuffle",
+  "version": "0.1.0",
+  "description": "fisher yates shuffle js impleement",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node benchmark/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsqviva/fisher-yates-shuffle.git"
+  },
+  "keywords": [
+    "fisher yates",
+    "shuffle",
+    "array shuffle"
+  ],
+  "author": "wsqviva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wsqviva/fisher-yates-shuffle/issues"
+  },
+  "homepage": "https://github.com/wsqviva/fisher-yates-shuffle#readme",
+  "devDependencies": {
+    "benchmark": "^2.1.1",
+    "koa": "^1.2.1",
+    "koa-static": "^2.0.0",
+    "rollup": "^0.34.10",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>performance test</title>
+</head>
+<body>
+
+  <div>
+    <span>数组元素的数量:</span>
+    <input type="number" id="num" value="100">
+    <button id="btn">run</button>
+  </div>
+  <div id="ret" style="width: 300px; margin-top: 20px; margin-left: 20px; word-break: break-word;"></div>
+
+  <script src="./node_modules/lodash/lodash.js"></script>
+  <script src="./node_modules/platform/platform.js"></script>
+  <script src="./node_modules/benchmark/benchmark.js"></script>
+
+  <script src="/dist/bundle.js"></script>
+  <script src="/benchmark/benchmark.umd.js"></script>
+  <script>
+    var btnElem = document.querySelector('#btn');
+    var numElem = document.querySelector('#num');
+    var retElem = document.querySelector('#ret');
+
+    btnElem.addEventListener('click', function() {
+      var result = runTest(numElem.value);
+      var r = result.r;
+      var suite = result.suite;
+      //retElem.innerHTML = JSON.stringify(r);
+      console.log(suite[0]['stats']);
+    }, false);
+  </script>
+</body>
+</html>
