@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * return number from lower value(include)to upper value(include)
+ * a random number range lower value(include) between upper value(include)
  *
- * @param lower from value
- * @param upper to value
+ * @param {Number} lower    from value
+ * @param {Number} upper    to value
  * @returns {Number}
  */
 function random(lower, upper) {
@@ -13,12 +13,12 @@ function random(lower, upper) {
 
 /**
  * fisher-kates-shuffle
+ * return a shuffled array
  *
- * @param {Array} arr array to be shuffled
- * @param {Number} n pick n members from arr
- * @param {Boolean} inplace create new array or inplace opertation 
- * @return result {Array} return an shuffled array
- *
+ * @param {Array} arr
+ * @param {Number} n          pick n members from arr
+ * @param {Boolean} inplace   create new array or inplace opertation 
+ * @return {Array}
  */
 export default function(arr, n, inplace) {
   if (arguments.length == 1) {
