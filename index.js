@@ -16,7 +16,7 @@ function random(lower, upper) {
  *
  * @param {Array} arr array to be shuffled
  * @param {Number} n pick n members from arr
- * @param {Boolean} inplace is inplace
+ * @param {Boolean} inplace create new array or inplace opertation 
  * @return result {Array} return an shuffled array
  *
  */
