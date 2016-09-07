@@ -20,7 +20,7 @@ function random(lower, upper) {
  * @param {Boolean} inplace   create new array or inplace opertation 
  * @return {Array}
  */
-export default function(arr, n, inplace) {
+module.exports = function(arr, n, inplace) {
   if (arguments.length == 1) {
     n = arr.length;
   }
